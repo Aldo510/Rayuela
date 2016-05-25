@@ -4,32 +4,28 @@ $(document).ready(function() {
   //cada vez que le de clic al boton de update
   $("#start_btn").click(function() {
     //Llamara a la funcion counter
-    counter();
+    //counter();
+    var counter = 3;
+    setInterval(function(){
+      if (counter >= 0){
+        $("#counter").css("display","inline");
+        $("#counter").html(counter);
+        console.log(counter);
+        if (counter == 0) {
+          $("#counter").html("A Jugar!!");
+          changeTD("Player2");
+          changeTD("Player1");
+        };
+        counter--;
+      };
+      
+    }, 1000);
+
     //Llamara a la funcion changeTD
-    
+    // changeTD("Player2");
+    // changeTD("Player1");
   });
 });
-
-var counter = function(){
-  //Contador que se disminuira
-  var count = 3;
-  //Hacer condicion para que el contador llegue solo hasta 0
-  if(count >= 0){
-    //Hacer que el contador donde estaran los numero sea visible
-    $("#counter").css("display","inline");
-    //Mostrar en el hatml el valor del contador
-    $("#counter").html(count);
-    if (count == 0) {
-      $("#counter").html("A Jugar!!");
-      changeTD("Player2");
-    };
-    //Disminuir el valor del contador
-    count--;
-  };
-  //Usar settimeout para volver a llamar a la funcion
-  //counter cada segundo
-  setTimeout(counter(), 1000); 
-}//fin counter
   /*Ver por que falla este metodo 
   y hacer que cuando le de clic a un boton se 
   frene el avance
@@ -50,7 +46,7 @@ var changeTD = function(player){
   console.log(actual_Index);
 
   //si el indice en el que este es 100 termina el programa 
-  if (actual_Index == "5"){
+  if (actual_Index == "100"){
     console.log("Ya termino");
   //De lo contrario
   }else{
@@ -61,6 +57,6 @@ var changeTD = function(player){
     //Llama a la funcion setTimeout para que cada
 
     setTimeout(function(){
-      changeTD(player)}, 10); 
+      changeTD(player)}, 5); 
   }
 }

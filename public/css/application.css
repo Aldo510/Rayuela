@@ -76,4 +76,10 @@ button:hover {
 .active{
   background-color: black;
   border-right: 0 !important;
+}/*Este codigo de css es para indicar
+que solo a el hijo #90 de cada td 
+dentro de .table le agregue un backgroun
+de cierto color*/
+.table td:nth-child(90) {
+  background-color: red;
 }
