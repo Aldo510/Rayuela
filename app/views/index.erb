@@ -1,0 +1,26 @@
+<header>
+  <img src="img/codea-logo.png" id="logo">
+</header>
+
+<h1 id="main-title">¡RAYUELA!</h1>
+<button id="start_btn">Jugar</button>
+<br>
+<h2 id="counter"></h2>
+<br>
+<table class="table">
+  <tr id="Player1">
+    <td ><strong>Jugador 1</strong></td>
+    <td class="active" id="0"></td>
+    <% 100.times do |x| %>
+      <td id="<%= x + 1 %>"></td>
+    <% end %>
+  </tr>
+
+  <tr id="Player2">
+    <td ><strong>Jugador 2</strong></td>
+    <td class="active" id="0"></td>
+    <% 100.times do |index| %>
+      <td id="<%= index + 1 %>"></td>
+    <% end %>
+  </tr>
+</table>
