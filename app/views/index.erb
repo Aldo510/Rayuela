@@ -9,7 +9,7 @@
 <br>
 <table class="table">
   <tr id="Player1">
-    <td ><strong>Jugador 1</strong></td>
+    <td ><strong>Jugador 1<br>(Tecla Q)</strong></td>
     <td class="active" id="0"></td>
     <% 100.times do |x| %>
       <td id="<%= x + 1 %>"></td>
@@ -17,10 +17,12 @@
   </tr>
 
   <tr id="Player2">
-    <td ><strong>Jugador 2</strong></td>
+    <td ><strong>Jugador 2<br>(Tecla P)</strong></td>
     <td class="active" id="0"></td>
     <% 100.times do |x| %>
       <td id="<%= x + 1 %>"></td>
     <% end %>
   </tr>
 </table>
+
+<input id="put">Prueba</input>
